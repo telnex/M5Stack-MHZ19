@@ -1,28 +1,18 @@
-# M5Stack CO2 Display
-<img src="https://user-images.githubusercontent.com/2618822/54765192-694e5200-4c3c-11e9-94fe-ca132908caa0.jpeg" width=60%> 
+# :loudspeaker: Измеритель уровня CO2 на M5Stack
+### **Версия:** 1.0
+![M5Stack](https://img.shields.io/badge/M5Stack-Core_1-blue?style=flat-square&logo=appveyor) ![Arduino IDE 2.0.1](https://img.shields.io/badge/Arduino_IDE-2.0.1-blue?style=flat-square&logo=appveyor)
+![Иллюстрация к проекту](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSvEzpZwDhYHhC3y6IvePiCfcNg_gnjNYyL4M8MeDZLSSgycLCsR7K3tPALoCoyGmDsH0IJ9PsKJh7volbyj28nqEVSqgVc5a9Dn0vvt_FYhaz60pELMfC-C8Dln1mew7ne-VP5qvGZIbgAOF4zxmhS4XwRioIrFJpNLrR2cvkzSUCiR-70-cX2kVhnA/w640-h381/logo-m5stack.jpg)
 
-<img src="https://user-images.githubusercontent.com/2618822/54765256-85ea8a00-4c3c-11e9-84e3-35d9057d830b.jpeg" width=20%> <img src="https://user-images.githubusercontent.com/2618822/54765260-871bb700-4c3c-11e9-88b4-ec9583d13bd1.jpeg" width=20%> <img src="https://user-images.githubusercontent.com/2618822/54765265-88e57a80-4c3c-11e9-8e3a-60476c380ff1.jpeg" width=20%>
+:tv: [Смотреть видео на YouTube](https://www.youtube.com/shorts/iWTrOM322Z4)
+## Описание программы
+Данное устройство определять уровень CO2 в воздухе и построено на базе платформы M5Stack (ESP32) и датчика CO2 MHZ19-B. Программа написана в среде Arduino IDE (C++).
+В программе реализована функция отправки данных на сервер, в моем случае это Nginx+Flask+InfuxDB+Grafana. В файлах ``` prepare.psd``` и ``` set-inf.psd``` исходники картинок для Adobe Photoshop CC.
 
-## Materials
+Нажатие кнопки **A** откроет меню (статус сети, заряд), для отключения звука нажать **B**, **С** - выход. 
 
-- M5Stack
-- MicroSD Card (To store image files. It's quite small.)
-- 1x15 Pin header
-- Some short cables
-- MHZ19-B CO2 Sensor
-
-## SD Card
-Place the all files under the _SD_ directory to the microSD card. 
-
-## Case
-<img src="https://user-images.githubusercontent.com/2618822/54765491-f691a680-4c3c-11e9-8679-03a1abf97ff7.jpg" width=20%>
-https://www.thingiverse.com/thing:3507704
-
-
-## Credits:
-
-### [tobiasschuerg/MH-Z-CO2-Sensors](https://github.com/tobiasschuerg/MH-Z-CO2-Sensors)
-MIT License
-Copyright (c) 2018 Tobias SchÃ¼rg
-
-The included MHZ CO2 sensor library is based on [tobiasschuerg/MH-Z-CO2-Sensors](https://github.com/tobiasschuerg/MH-Z-CO2-Sensors) and modified to suitable for M5Stack/ESP32.
+## Настройки
+Укажите данные вашей WiFi сети:
+```cpp
+const char *ssid = "WIFI";
+const char *password = "PASS"
+```
