@@ -19,6 +19,7 @@
 const char *ssid = "WIFI";
 const char *password = "PASS"
 ```
+Файлы из папки SD скопировать на карту памяти.
 ## Комплектующие
 - M5Stack
 - MicroSD Card (Для хранения картинок)
